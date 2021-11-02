@@ -1,0 +1,50 @@
+{
+    "name": "@buildspace-nft-starter/monorepo",
+    "version": "1.0.0",
+    "keywords": [
+      "ethereum",
+      "react",
+      "workspaces",
+      "yarn"
+    ],
+    "private": true,
+    "scripts": {
+      "react-app:build": "yarn workspace @buildspace-nft-starter/react-app build --max-old-space-size=12288",
+      "react-app:eject": "yarn workspace @buildspace-nft-starter/react-app eject",
+      "react-app:start": "yarn workspace @buildspace-nft-starter/react-app start",
+      "react-app:test": "yarn workspace @buildspace-nft-starter/react-app test",
+      "build": "yarn workspace @buildspace-nft-starter/react-app build --max-old-space-size=12288",
+      "prettier": "yarn workspace @buildspace-nft-starter/react-app prettier",
+      "chain": "yarn workspace @buildspace-nft-starter/hardhat chain",
+      "fork": "yarn workspace @buildspace-nft-starter/hardhat fork",
+      "node": "yarn workspace @buildspace-nft-starter/hardhat chain",
+      "test": "yarn workspace @buildspace-nft-starter/hardhat test",
+      "start": "yarn workspace @buildspace-nft-starter/react-app start",
+      "compile": "yarn workspace @buildspace-nft-starter/hardhat compile",
+      "deploy": "yarn workspace @buildspace-nft-starter/hardhat deploy",
+      "watch": "yarn workspace @buildspace-nft-starter/hardhat watch",
+      "accounts": "yarn workspace @buildspace-nft-starter/hardhat accounts",
+      "balance": "yarn workspace @buildspace-nft-starter/hardhat balance",
+      "send": "yarn workspace @buildspace-nft-starter/hardhat send",
+      "ipfs": "yarn workspace @buildspace-nft-starter/react-app ipfs",
+      "surge": "yarn workspace @buildspace-nft-starter/react-app surge",
+      "generate": "yarn workspace @buildspace-nft-starter/hardhat generate",
+      "account": "yarn workspace @buildspace-nft-starter/hardhat account",
+      "mineContractAddress": "cd ./hardhat && npx hardhat mineContractAddress",
+      "wallet": "cd ./hardhat && npx hardhat wallet",
+      "fundedwallet": "cd ./hardhat && npx hardhat fundedwallet",
+      "flatten": "cd ./hardhat && npx hardhat flatten",
+      "clean": "cd ./hardhat && npx hardhat clean"
+    },
+    "workspaces": {
+      "packages": [
+        "packages/*"
+      ],
+      "nohoist": [
+        "**/hardhat",
+        "**/hardhat/**"
+      ]
+    },
+    "dependencies": {},
+    "devDependencies": {}
+  }
